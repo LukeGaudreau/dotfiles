@@ -1,0 +1,25 @@
+[user]
+	email = gaudreal@bc.edu
+	name = Luke Gaudreau
+[diff]
+	compactionHeuristic = true
+	submodule = log
+	tool = ediff
+[difftool]
+	prompt = false
+[difftool "ediff"]
+	cmd = ediff \"$LOCAL\" \"$REMOTE\"
+[merge]
+	ff = only
+	log = true
+	tool = ediff
+[mergetool]
+	prompt = false
+	keepBackup = false
+[mergetool "ediff"]
+	cmd = emacsclient --eval \"\
+	(ediff-merge-files-with-ancestor\
+	\\\"$LOCAL\\\" \\\"$REMOTE\\\"\
+	\\\"$BASE\\\" nil \\\"$MERGED\\\")\"
+[core]
+	excludesfile = /home/luke/.gitignore_global
