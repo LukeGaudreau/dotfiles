@@ -1,4 +1,4 @@
-hsetroot -cover ~/.cloud/Pictures/Wallpapers/colortiles.jpg
+hsetroot -cover ~/.dotfiles/wallpaper.jpg
 xrdb -merge ~/.Xresources
 xsetroot -cursor_name left_ptr &
 compton &
